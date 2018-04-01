@@ -28,8 +28,8 @@ from email.mime.base import MIMEBase
 from email.mime.multipart import MIMEMultipart
 from email import encoders
 
-email_user = 'python.py9090@gmail.com'
-email_send = 'python.py9090@gmail.com'
+email_user = '**************@gmail.com'
+email_send = '**************@gmail.com'
 
 msg = MIMEMultipart()
 filename='python.csv'
@@ -42,6 +42,6 @@ msg.attach(part)
 text = msg.as_string()
 server = smtplib.SMTP('smtp.gmail.com',587)
 server.starttls()
-server.login(email_user,'Dcnd@123')
+server.login(email_user,'********')
 server.sendmail(email_user,email_send,text)
 server.quit()
